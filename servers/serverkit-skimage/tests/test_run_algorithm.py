@@ -112,13 +112,13 @@ def run_algorithm_client_side():
 
 
 def test_compare_algo_outputs():
-    # server_output = run_algorithm_server_side()
+    server_output = run_algorithm_server_side()
     client_output = run_algorithm_client_side()
 
-    # for server_data_tuple, client_data_tuple in zip(server_output, client_output):
-    #     assert (
-    #         server_data_tuple[2] == client_data_tuple[2]
-    #     ), "Server and client output data types are different."
-    #     assert np.allclose(
-    #         server_data_tuple[0], client_data_tuple[0]
-    #     ), "Server and client algorithm outputs do not match."
+    for server_data_tuple, client_data_tuple in zip(server_output, client_output):
+        assert (
+            server_data_tuple[2] == client_data_tuple[2]
+        ), "Server and client output data types are different."
+        assert np.allclose(
+            server_data_tuple[0], client_data_tuple[0]
+        ), "Server and client algorithm outputs do not match."
