@@ -3,10 +3,16 @@ services:
     build:
       context: ./registry
     ports:
-      - "7000:8000"
+      - "8000:8000"
 
-  skimage:
+  skimage-log:
     build:
-      context: ./servers/serverkit-skimage
+      context: ./servers/serverkit-skimage-LoG
+    depends_on:
+      - servers_registry
+
+  rembg:
+    build:
+      context: ./servers/serverkit-rembg
     depends_on:
       - servers_registry
