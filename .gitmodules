@@ -4,3 +4,15 @@
 [submodule "servers/serverkit-skimage-LoG"]
 	path = servers/serverkit-skimage-LoG
 	url = https://github.com/Imaging-Server-Kit/serverkit-skimage-LoG
+[submodule "servers/serverkit-stardist"]
+	path = servers/serverkit-stardist
+	url = https://github.com/Imaging-Server-Kit/serverkit-stardist
+[submodule "servers/serverkit-cellpose"]
+	path = servers/serverkit-cellpose
+	url = https://github.com/Imaging-Server-Kit/serverkit-cellpose
+[submodule "servers/serverkit-spotiflow"]
+	path = servers/serverkit-spotiflow
+	url = https://github.com/Imaging-Server-Kit/serverkit-spotiflow
+[submodule "servers/serverkit-orientationpy"]
+	path = servers/serverkit-orientationpy
+	url = https://github.com/Imaging-Server-Kit/serverkit-orientationpy
