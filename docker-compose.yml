@@ -1,9 +1,9 @@
 services:
   servers_registry:
-    build:
-      context: ./registry
+    image: mallorywittwerepfl/imaging-server-kit:latest
     ports:
       - "8000:8000"
+    command: python3 start_registry.py
   rembg:
     build:
       context: ./servers/serverkit-rembg
