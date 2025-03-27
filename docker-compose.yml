@@ -1,5 +1,5 @@
 services:
-  servers_registry:
+  algorithm_hub:
     image: mallorywittwerepfl/imaging-server-kit:latest
     ports:
       - "8000:8000"
@@ -8,29 +8,29 @@ services:
     build:
       context: ./servers/serverkit-rembg
     depends_on:
-      - servers_registry
+      - algorithm_hub
   skimage-log:
     build:
       context: ./servers/serverkit-skimage-LoG
     depends_on:
-      - servers_registry
+      - algorithm_hub
   stardist:
     build:
       context: ./servers/serverkit-stardist
     depends_on:
-      - servers_registry
+      - algorithm_hub
   cellpose:
     build:
       context: ./servers/serverkit-cellpose
     depends_on:
-      - servers_registry
+      - algorithm_hub
   spotiflow:
     build:
       context: ./servers/serverkit-spotiflow
     depends_on:
-      - servers_registry
+      - algorithm_hub
   orientationpy:
     build:
       context: ./servers/serverkit-orientationpy
     depends_on:
-      - servers_registry
+      - algorithm_hub
